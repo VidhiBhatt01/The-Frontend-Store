@@ -15,7 +15,7 @@ Welcome to the Frontend Store. This repo is built specially to help beginners co
 Someone will rescue you out within 24 hours.<br>
 [2] Make sure your projects are free from plagiarism.<br>
 [3] Do not spam.<br>
-[4] Always make a new branch and then submit the PR. DO not work on the main branch.<br>
+[4] Always make a new branch and then submit the PR. Do not work on the main branch.<br>
 [5] Draft proper pull request and make sure you describe what your PR is about.<br>
 
 That's all for now, happy contributing! 🙌
