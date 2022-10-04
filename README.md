@@ -18,4 +18,4 @@ Someone will rescue you out within 24 hours.<br>
 [4] Always make a new branch and then submit the PR. Do not work on the main branch.<br>
 [5] Draft proper pull request and make sure you describe what your PR is about.<br>
 
-That's all for now, happy contributing! 🙌
+That's all for now, happy contributing! 🙌.
