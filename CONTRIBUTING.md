@@ -1,6 +1,7 @@
 # Contributing Guidelines
 
 This documentation contains a set of guidelines to help you during the contribution process. 
+- Star the repo ⭐
 - Add your projects in the respective folder. If confused, simply raise an issue.<br>
 Someone will rescue you out within 24 hours.
 - Make sure your projects are **free from plagiarism.**
