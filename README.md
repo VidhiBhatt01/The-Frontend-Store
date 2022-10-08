@@ -1,6 +1,15 @@
 # The-Frontend-Store
 A one stop shop for amazing Frontend Designs
 
+![image](https://user-images.githubusercontent.com/83345228/192149065-b229b6bb-c01a-488f-b887-fc8056efe497.png)
+
+Welcome to the Frontend Store. This repo is built specially to help beginners contribute to open source during Hacktoberfest 2022. If you are a developer and want to add your Projects related to HTML-CSS-JS, this is the perfect place for you.
+ 
+# Want to contribute?
+- Take a look at [`contributing guidelines`](CONTRIBUTING.md).
+- Refer [GitHub Flow](https://guides.github.com/introduction/flow). 
+
+
 <img align="left" src="http://estruyf-github.azurewebsites.net/api/VisitorHit?user=VidhiBhatt01&repo=The-Frontend-Store&countColorcountColor&countColor=%237B1E7B"/>
 <img align="right" src="https://img.shields.io/github/repo-size/VidhiBhatt01/The-Frontend-Store?style=for-the-badge&logo=appveyor" alt="GitHub repo size"/>
 
@@ -10,21 +19,7 @@ A one stop shop for amazing Frontend Designs
 <img src="https://forthebadge.com/images/badges/built-with-love.svg" alt=" forks"/>
 </p>
 
-
-![image](https://user-images.githubusercontent.com/83345228/192149065-b229b6bb-c01a-488f-b887-fc8056efe497.png)
-
-Welcome to the Frontend Store. This repo is built specially to help beginners contribute to open source during Hacktoberfest 2022. If you are a developer and want to add your Projects related to HTML-CSS-JS, this is the perfect place for you.
-
-# Rules for contribution: 
-
-## Want to contribute?
-- Take a look at [`contributing guidelines`](CONTRIBUTING.md).
-- Refer [GitHub Flow](https://guides.github.com/introduction/flow). 
-
-
-That's all for now, happy contributing! 🙌
-
-## Contributors
+# Contributors:
 
 **Thanks goes to these wonderful people ❤️**
 
@@ -36,12 +31,10 @@ That's all for now, happy contributing! 🙌
 </div>
 <br>
 
-## That's all for now, happy contributing! 🙌
+<h2 align="center" >That's all for now, happy contributing! 🙌</h2>
 
-<br>
-<hr>
 <h6 align="center">© The Frontend Store 2022 
-<br>
+
 All Rights Reserved</h6>
 
 
