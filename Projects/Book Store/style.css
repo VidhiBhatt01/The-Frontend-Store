@@ -12,13 +12,14 @@ body {
     height: auto;
 }
 
-img {
-    padding: 15px;
+.col-md-8 {
+    padding: 26px;
 }
 
 .displayBox {
     width: 100%;
     font-family: Verdana, Geneva, Tahoma, sans-serif
+    
 }
 
 .scroll-box {
