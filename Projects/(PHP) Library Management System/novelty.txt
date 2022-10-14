@@ -1,0 +1,17 @@
+issuedbookdetails me se fetch karke genre ka sum karne ke baad,
+
+jiska max hoga us genre ke saare book jo issued nahi hai unhe waha present karna hai top 5 books;
+
+for getting all the genres he ever issued:
+
+select books.genreid, count(books.genreid) from books join issuedbookdetails on books.id=issuedbookdetails.bookid where issuedbookdetails.Studentid="sid13" group by genreid
+
+returns the sum of genres for gfenre type.... e.g:
+
+mysql> select books.genreid, count(books.genreid) from books join issuedbookdetails on books.id=issuedbookdetails.bookid where issuedbookdetails.Studentid="sid13" group by genreid;
++---------+----------------------+
+| genreid | count(books.genreid) |
++---------+----------------------+
+|       3 |                    2 |
+|       6 |                    2 |
++---------+----------------------+
