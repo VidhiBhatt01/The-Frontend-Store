@@ -1,0 +1,95 @@
+.loginScreen {
+    position: relative;
+    height: 100%;
+    background: url("https://cdn.hipwallpaper.com/i/98/21/dUyCkp.jpg") center no-repeat;
+    background-size: cover;
+}
+
+
+.loginScreen-body > h1 {
+    font-size: 3.125em;
+    margin-bottom: 10px;
+}
+
+.loginScreen-body {
+    position: absolute;
+    top: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+    text-align: center;
+    z-index: 1;
+    color: #fff;
+    padding: 20px;
+    
+}
+
+.loginScreen-body > h2{
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+
+.loginScreen-gradient {
+    width: 100%;
+    z-index: 1;
+    height: 100vh;
+    background: rgba(0,0,0,0.4);
+    background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.8) 0,
+        rgba(0, 0, 0, 0) 60%,
+        rgba(0, 0, 0, 0.8) 100%,
+    );
+}
+
+
+.loginScreen-button {
+    position: fixed;
+    right: 20px;
+    top: 35px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #e50914;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+.loginScreen-logo {
+    position: fixed;
+    left: 0;
+    width: 150px;
+    object-fit: contain;
+    padding: 20px;
+}
+
+.loginScreen-input > form > input {
+    padding: 10px;
+    outline-width: 0;
+    height: 30px;
+    width: 30%;
+    border: none;
+    max-width: 600px;
+
+}
+
+.loginScreen-input {
+    margin: 20px;
+}
+
+.loginScreen-getStarted  {
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #e50914;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}

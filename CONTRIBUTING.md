@@ -1,7 +1,13 @@
 # Contributing Guidelines
 
 This documentation contains a set of guidelines to help you during the contribution process. 
-
+- Star the repo ⭐
+- Add your projects in the respective folder. If confused, simply raise an issue.<br>
+Someone will rescue you out within 24 hours.
+- Make sure your projects are **free from plagiarism.**
+- Do not spam.
+- Always make a new branch and then submit the PR. Do not work on the main branch
+- Draft proper pull request and make sure you **describe what your PR is about**.
 # Submitting Contributions👩‍💻👨‍💻
 Below you will find the process and workflow used to review and merge your changes.
 
