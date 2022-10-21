@@ -1,0 +1,124 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #a4d1eb;
+}
+.heading{
+    font-weight: bolder;
+    font-size: 25px;
+    font-family: 'Barlow', sans-serif;
+    width: 100%;
+    position: sticky;
+    margin-bottom: 10px;
+}
+.heading h1{
+    color: white;
+    
+}
+.heading h1:hover{
+    text-shadow: 0px 2px 5px grey;
+}
+.heading a{
+    text-decoration: none;
+}
+#searchit:hover{
+    box-shadow:0px 0px 5px lightgray, 0px 0px -5px lightgray;
+    border-radius: 5px;
+}
+.container{
+    background-color: white;
+    width: 80vmin;
+    /*position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;*/
+    padding: 60px;
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(44, 65, 77, 0.4, 2);
+}
+.search-box{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.search-box input{
+    font-family: 'Lato', sans-serif;
+    padding: 5px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-bottom: 3px solid #a4d1eb;
+}
+.search-box button{
+    width: 25%;
+    padding: 10px 0;
+    background-color: #a4d1eb;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+}
+.search-box button:hover{
+    background-color: #035382;
+    box-shadow:0 0 30px #a4d1eb;
+}
+.result{
+    position: relative;
+    font-family: 'Lato', sans-serif;
+}
+.result h3{
+    font-size: 25px;
+    color: #035382;
+}
+.result .soln{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.result button{
+    background-color: transparent;
+    color: #a4d1eb;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+.result button:hover{
+    color: #035382;
+    text-shadow: 0 0 10px #a4d1eb;
+}
+.result .detail{
+    display: flex;
+    gap: 10px;
+    color: #a4d1eb;
+    margin: 5px 0 15px 0;    
+}
+.result .meaning{
+    color: #026dab;
+    border-left: 5px solid #a4d1eb;
+    margin-top: 20px;
+    padding-left: 15px;
+}
+.result .example{
+    color: #026dab;
+    font-style: oblique;
+    border-left: 5px solid #a4d1eb;
+    margin-top: 20px;
+    padding-left: 15px;
+}
+@media only screen and (min-width: 768px){
+    .container{
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+}
+@media only screen and(max-width: 767px){
+    .container{
+        margin-bottom: 20px;
+    }
+}
