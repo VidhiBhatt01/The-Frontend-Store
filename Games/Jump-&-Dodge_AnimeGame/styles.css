@@ -8,6 +8,7 @@ body{
 .beyblade_poster{
   height:100px;
   width: auto;
+
 }
 .beyblade_poster:hover{
   opacity: 0.8;
@@ -19,9 +20,13 @@ h2,h4{
 display: inline-block;
 }
 .ginga{
-  height: 220px;
+  height: 10px;
   width: auto;
+  
 }
+
+
+
 
 
 
@@ -32,6 +37,8 @@ display: inline-block;
     width: 1000px;
     position: relative;
     overflow: hidden;
+    /* align-content:initial; */
+    /* align-items: flex-start; */
 }
 
 #container #mainBeyblade {
@@ -45,6 +52,13 @@ display: inline-block;
 #container #mainBeyblade img {
     height: 70px;
     width: 70px;
+    
+}
+
+#container #nem{
+    align-self: flex-end;
+    background-color: aqua;
+    height: 0px;
 }
 
 .mainBeybladeActive {
@@ -70,6 +84,7 @@ display: inline-block;
     position: absolute;
     bottom: 20px;
     right: -20px;
+    
 }
 
 #container #block img {
@@ -96,14 +111,16 @@ display: inline-block;
     width: 1200px;
     position: absolute;
     bottom: 0;
+    background-color: antiquewhite;
 }
 
 #container #road img {
-    height: 30px;
+    height: 100px;
     width: 2000px;
     position: absolute;
     left: 0;
     animation: none;
+    background-color: antiquewhite;
 }
 
 @keyframes roadAnimate {
@@ -154,10 +171,14 @@ display: inline-block;
 #gameOver {
     display: none;
     font-size: 70px;
-    position: absolute;
+    position: sticky;
     left: calc(50% - 181px);
     top: calc(50% - 40px);
     width: 362px;
     height: 80px;
-    color: white;
+    color: rgb(253, 5, 5);
+    font-style: italic;
+    font-weight: 400;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
 }
