@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sequence Repeater</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h1>Start Reactor</h1>
+    <h1 id="title">Start Reactor</h1>
     <div class="container">
       <div class="panel">
         <div class="boxPanel">
@@ -29,8 +30,8 @@
             <div class="memory"></div>
             <div class="memory"></div>
             <div class="btns">
-              <h1 id="loadButton">PLAY</h1>
-              <h1 id="startButton">LOAD</h1>
+              <h1 id="startButton">PLAY</h1>
+              <h1 id="loadButton">LOAD</h1>
             </div>
           </div>
         </div>
@@ -38,14 +39,15 @@
 
       <div class="panel">
         <div class="boxPanel">
-          <div class="computerLedPanel">
+          <div class="playerLedPanel">
             <div class="led lvl1"></div>
             <div class="led lvl2"></div>
             <div class="led lvl3"></div>
             <div class="led lvl4"></div>
             <div class="led lvl5"></div>
           </div>
-          <div class="panelMemory">
+          <div class="playerMemory">
+            <div data-memory="0" class="player-memory"></div>
             <div data-memory="1" class="player-memory"></div>
             <div data-memory="2" class="player-memory"></div>
             <div data-memory="3" class="player-memory"></div>
@@ -54,7 +56,6 @@
             <div data-memory="6" class="player-memory"></div>
             <div data-memory="7" class="player-memory"></div>
             <div data-memory="8" class="player-memory"></div>
-            <div data-memory="9" class="player-memory"></div>
           </div>
         </div>
       </div>
