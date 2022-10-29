@@ -1,0 +1,116 @@
+body {
+    background-color: #460644;
+  }
+  
+  #title-Tag-Line {
+    font-size: medium;
+  }
+
+
+  .form {
+    background: #290329;
+    box-shadow: 0 30px 60px 0 rgba(203, 207, 212, 0.4);
+    border-radius: 50px;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    border-top: 5px solid #180417;
+    transform-origin: top center;
+	animation: swing 5s ease infinite;
+  }
+  ::-webkit-input-placeholder {
+    font-size: 1 em;
+  }
+  
+  .title{
+    display: block;
+    font-family: sans-serif;
+    margin: 10px auto 5px;
+    width: 300px;
+  }
+  
+  .pageTitle{
+    font-size: 2em;
+    font-weight: bold;
+    color: #ebebeb;
+  }
+  .secondaryTitle{
+    color: grey;
+  }
+  
+  .name {
+    background-color: #ebebeb;
+    color: rgb(0, 0, 0);
+  }
+  .name:hover {
+    border-bottom: 5px solid #180417;
+    height: 30px;
+    width: 380px;
+    transition: linear 0.5s;
+  }
+  
+  .email {
+    background-color: #ebebeb;
+    height: 2em;
+  }
+  
+  .email:hover {
+    border-bottom: 5px solid #180417;
+    height: 30px;
+    width: 380px;
+    transition: linear 0.5s;
+  }
+  
+  .message {
+    background-color: #ebebeb;
+    overflow: hidden;
+    height: 6rem;
+  }
+  
+  .message:hover {
+    border-bottom: 5px solid #180417;
+    height: 6em;
+    width: 380px;
+    transition: linear 0.5s;
+  }
+  
+  .formEntry {
+    display: block;
+    margin: 30px auto;
+    min-width: 300px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    transition: all 0.5s ease 0s;
+  }
+
+  .termsConditions{
+    margin: 0 auto 5px 80px;
+  }
+  .submit {
+    width: 200px;
+    color: white;
+    background-color: #180417;
+    font-size: 20px;
+  }
+  
+  .submit:hover {
+    box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
+    transform: translateY(-3px);
+    width: 300px;
+    border-top: 5px solid #460644;
+    border-radius: 0%;
+  }
+  
+  @keyframes swing {
+	20% { transform: rotate(15deg); }	
+	40% { transform: rotate(-10deg); }
+	60% { transform: rotate(5deg); }	
+	80% { transform: rotate(-5deg); }	
+	100% { transform: rotate(0deg); }
+}
