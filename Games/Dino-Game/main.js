@@ -16,6 +16,7 @@ let playerScore = 0;
 let scoreCounter = () => {
     playerScore++;
     score.innerHTML = `Score <b>${playerScore}</b>`;
+    playerScore.update();
 }
 
 
