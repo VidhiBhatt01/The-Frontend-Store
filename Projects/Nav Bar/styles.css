@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+header {
+  padding: 1rem 6rem;
+  justify-content: space-between;
+  background-color: coral;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+ul {
+  gap: 2rem;
+}
+
+.mobile__view,
+.close__open {
+  display: none;
+}
+
+.buttons {
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  header {
+    padding: 1rem 2rem;
+    position: relative;
+    z-index: 1;
+  }
+  .desktop__view {
+    display: none;
+  }
+
+  .mobile__view {
+    width: 60vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: coral;
+    position: absolute;
+    display: block;
+    transition: all 0.3s ease-in;
+    z-index: -1;
+  }
+
+  .mobile__view ul,
+  .mobile__view .buttons {
+    margin-top: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .close__open {
+    display: flex;
+    position: relative;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+
+  .open,
+  .close {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .close {
+    display: none;
+  }
+
+  .open {
+    display: flex;
+  }
+}
