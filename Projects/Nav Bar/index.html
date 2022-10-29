@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+    <title>Navigation Bar</title>
+  </head>
+  <body>
+    <header class="flex">
+      <div class="logo">
+        <p>LOGO</p>
+      </div>
+      <nav class="desktop__view">
+        <ul class="flex">
+          <li class="active">About</li>
+          <li>Contact</li>
+          <li>Testimonial</li>
+          <li>Blog</li>
+          <li>FAQs</li>
+        </ul>
+      </nav>
+      <div class="buttons flex desktop__view">
+        <button class="btn btn-primary">Sign Up</button>
+        <button class="btn btn-secondary">Login</button>
+      </div>
+      <div class="close__open">
+        <img class="open" src="./assets/hamburger-menu.svg" alt="hamburger" />
+        <img class="close" src="./assets/close.svg" alt="close" />
+      </div>
+      <div class="mobile__view">
+        <nav>
+          <ul>
+            <li class="active">About</li>
+            <li>Contact</li>
+            <li>Testimonial</li>
+            <li>Blog</li>
+            <li>FAQs</li>
+          </ul>
+        </nav>
+        <div class="buttons">
+          <button class="btn btn-primary">Sign Up</button>
+          <button class="btn btn-secondary">Login</button>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
