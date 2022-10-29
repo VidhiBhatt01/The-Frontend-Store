@@ -1,0 +1,40 @@
+body { background:rgb(0, 0, 0); }
+form { max-width:500px; margin:10% auto; }
+
+.contact-input {
+  color:white;
+  font-weight:500;
+  font-size: 18px;
+  line-height: 5px;
+  border:1px solid #2babc4;
+  background-color: transparent;
+  transition: all 0.3s;
+  padding: 15px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.contact-input:focus { border:2px solid #2babc4; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  width: 100%;
+  background:#2babc4;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover { background:#2babc4; }
