@@ -10,7 +10,6 @@ let speaking = document.getElementById("speaking");
 let caps = document.getElementById("caps");
 let f1caps = document.getElementById("fcaps");
 
-
 inputTextArea.addEventListener("input", function(){
 
   let txt = inputTextArea.value.trim();
@@ -37,7 +36,6 @@ f1caps.addEventListener("click", ()=> {
   inputTextArea.value = capitalizedSentences;
 });
 
-
 caps.addEventListener("click", ()=> {
   let words = inputTextArea.value.split(" ");
   let capitalizedWords = words.map(function(word) {
@@ -49,10 +47,6 @@ caps.addEventListener("click", ()=> {
 
 });
 
-
-
-
-
 button.addEventListener("click", function(){
   inputTextArea.value = '';
   wordCount.textContent = 0;
@@ -63,36 +57,3 @@ button.addEventListener("click", function(){
   readingtime.textContent = 0;
   speaking.textContent = 0;
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
