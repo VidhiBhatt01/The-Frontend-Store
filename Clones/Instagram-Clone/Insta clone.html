@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Clone</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <style>
+        .post {
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        .post img {
+            width: 100%;
+        }
+
+        .like-button {
+            cursor: pointer;
+        }
+
+        .comments {
+            margin-top: 10px;
+        }
+
+        .comment {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .comment img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <i class="fab fa-instagram"
+                style="background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888, #7a52a5); -webkit-background-clip: text; background-clip: text; color: transparent;"></i>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Explore</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Notifications</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <br>
+    <br>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <img src="profile.jpg" class="card-img-top" alt="User Profile">
+                    <div class="card-body">
+                        <h5 class="card-title">Username</h5>
+                        <input type="text" class="form-control mb-2" placeholder="Write a caption...">
+                        <input type="file" id="image-input" class="d-none">
+                        <label for="image-input" class="btn btn-primary mb-2">Select Image</label>
+                        <button class="btn btn-success btn-block mb-2" onclick="addPost()">Post</button>
+                    </div>
+                </div>
+
+
+                <div id="posts"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@12.6.1/dist/sweetalert2.all.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        let postsData = [];
+
+        function addPost() {
+            const imageInput = document.getElementById("image-input");
+            const captionInput = document.querySelector(".card-body input[type='text']");
+            const imageFile = imageInput.files[0];
+            const caption = captionInput.value;
+
+            if (imageFile && caption) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const post = {
+                        image: e.target.result,
+                        caption: caption,
+                        likes: 0,
+                        comments: []
+                    };
+                    postsData.push(post);
+                    displayPosts();
+                };
+                reader.readAsDataURL(imageFile);
+                captionInput.value = "";
+                imageInput.value = "";
+            } else {
+                Swal.fire('Oops!', 'Please select an image and write a caption.', 'error');
+            }
+        }
+
+        function likePost(index) {
+            postsData[index].likes++;
+            displayPosts();
+        }
+
+        function addComment(index, comment) {
+            postsData[index].comments.push(comment);
+            displayPosts();
+        }
+
+        function displayPosts() {
+            const posts = document.getElementById("posts");
+            posts.innerHTML = "";
+            for (let i = postsData.length - 1; i >= 0; i--) {
+                const post = postsData[i];
+                const postHTML = `
+                    <div class="post">
+                        <img src="${post.image}" alt="Post">
+                        <div class="card-body">
+                            <h5 class="card-title">Username</h5>
+                            <p class="card-text">${post.caption}</p>
+                            <div class="like-button" onclick="likePost(${i})">
+                                <i class="fas fa-heart"></i> ${post.likes} likes
+                            </div>
+                            <div class="comments">
+                                ${post.comments.map(comment => `
+                                    <div class="comment">
+                                        <img src="profile.jpg" alt="User">
+                                        <span><b>Username:</b> ${comment}</span>
+                                    </div>
+                                `).join("")}
+                            </div>
+                            <input type="text" class="form-control" placeholder="Add a comment..." onkeyup="if(event.keyCode === 13) addComment(${i}, this.value)">
+                        </div>
+                    </div>
+                `;
+                posts.innerHTML += postHTML;
+            }
+        }
+    </script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #3897f0;
+        color: white;
+        padding: 10px 20px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .user-profile {
+        display: flex;
+        align-items: center;
+    }
+
+    .user-profile img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 5px;
+    }
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .post {
+        background-color: #fff;
+        border: 1px solid #e1e1e1;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 300px;
+        max-width: 100%;
+    }
+
+    .post img {
+        width: 100%;
+        height: auto;
+    }
+
+    .post-details {
+        padding: 10px;
+    }
+
+    .username {
+        font-weight: bold;
+    }
+
+    .caption {
+        margin-top: 5px;
+    }
+
+    footer {
+        background-color: #fff;
+        text-align: center;
+        padding: 10px;
+    }
+</style>
+</head>
+
+
+<main>
+    <div class="post">
+        <img src="post1.jpg" alt="Post">
+        <div class="post-details">
+            <span class="username">user1</span>
+            <span class="caption">A beautiful sunset</span>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+</main>
+
+
+
+
+<footer class="bg-light text-center py-3">
+    <p>&copy; 2023 Instagram Clone</p>
+</footer>
+</body>
+
+
+</html>
